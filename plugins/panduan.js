@@ -54,7 +54,7 @@ global.panduan = [
     {
         "index": "2",
         "search": "how",
-        "deskripsi": "Cara menggunakan bot adalah dengan mengetikkan command bot. List command bot ada pada menu bot. jangan lupa, untuk mengakses command harus menggunakan prefix.\nPrefix Haruno bot adalah all prefix.\nContoh penggunaan prefix dan command yang benar: *.menu*",
+        "deskripsi": "Cara menggunakan bot adalah dengan mengetikkan command bot. List command bot ada pada menu bot. jangan lupa, untuk mengakses command harus menggunakan prefix.\nPrefix R-Txzy adalah all prefix.\nContoh penggunaan prefix dan command yang benar: *.menu*",
         "judul": "Cara menggunakan bot dan prefix"
     },
     {
