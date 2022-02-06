@@ -3,7 +3,7 @@ let moment = require('moment-timezone')
 let handler = async(m, { conn, usedPrefix, args, command }) => {
     let name = conn.getName(m.sender)
     let tulisan = `
-Halo ${name}, ${ucapan()} selamat datang di menu panduan Haruno Bot. di menu ini kalian bisa mendapatkan panduan soal bot whatsapp.
+Halo ${name}, ${ucapan()} selamat datang di menu panduan R-Txyz. di menu ini kalian bisa mendapatkan panduan soal bot whatsapp.
 ┌〔 List Panduan 〕
 ├ how
 ├ owner
