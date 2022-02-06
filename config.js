@@ -51,6 +51,12 @@ global.watermark = '©R-Txzy' //change the watermark
 global.image = 'https://telegra.ph/file/1a3eac3701775793618b3.jpg' //change the image
 global.thumbfoto = 'https://telegra.ph/file/90d4152ba12ed493905cc.jpg'
 
+// Image
+global.bank = 'https://telegra.ph/file/d5ddf4cc627bb0e6bc420.jpg'
+global.kandang = 'https://telegra.ph/file/67a6ee607d03a4e52757d.jpg'
+global.kolam = 'https://telegra.ph/file/5aa5dfa3394477e11fb18.jpg'
+global.thanks = 'https://telegra.ph/file/01917f7782b70de8f418d.jpg'
+
 global.multiplier = 9999999 // Semakin tinggi, semakin sulit naik level
 
 let chalk = require('chalk')
