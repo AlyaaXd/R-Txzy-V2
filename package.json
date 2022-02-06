@@ -1,5 +1,5 @@
 {
-  "name": "harunobot",
+  "name": "R-Txzy",
   "version": "2.2.0",
   "description": "WhatsApp Bot",
   "main": "index.js",
@@ -14,7 +14,7 @@
   "keywords": [
     "whatsapp-bot"
   ],
-  "author": "Fadli",
+  "author": "R-Txzy",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ariffb25/stikerinbot/issues"
