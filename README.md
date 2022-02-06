@@ -30,13 +30,13 @@
 > pkg install ffmpeg
 > pkg install libwebp
 > git clone https://github.com/AlyaaXd/R-Txyz-Botz
-> cd Txyz-Botz
+> cd R-Txyz-Botz
 > npm i
 > node run.js
 # Untuk Sdcard (File Sudah Di Download)
 > cd /sdcard
-> cp -r Txyz-Botz $HOME
-> cd Txyz-Botz
+> cp -r R-Txyz-Botz $HOME
+> cd R-Txyz-Botz
 > npm i
 > node run.js
 ```
