@@ -6,7 +6,7 @@ let handler = async (m, { conn, args }) => {
   let res = `https://bx-hunter.herokuapp.com/api/canvas/gfx1?apikey=FuckBitch&nama=${response[0]}`
   conn.sendFile(m.chat, res, 'kaneki.jpg', `Sudah Jadi`, m, false)
 }
-handler.help = ['kaneki'].map(v => v + ' <text>')
+handler.help = ['logokaneki'].map(v => v + ' <text>')
 handler.tags = ['nulis']
 handler.command = /^(logokaneki)$/i
 handler.register = true
