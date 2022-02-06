@@ -107,6 +107,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   }
   if (teks == 'nsfw') tags = {
     'hentai': 'Hentai',
+    'bokep': 'Bokep'
   }
   if (teks == 'islamic') tags = {
     'islamic': 'Islamic'
