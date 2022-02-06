@@ -29,14 +29,14 @@
 > pkg install bash
 > pkg install ffmpeg
 > pkg install libwebp
-> git clone https://github.com/AlyaaXd/Haruno-Botz
-> cd Haruno-Botz
+> git clone https://github.com/AlyaaXd/R-Txyz-Botz
+> cd Txyz-Botz
 > npm i
 > node run.js
 # Untuk Sdcard (File Sudah Di Download)
 > cd /sdcard
-> cp -r Haruno-Botz $HOME
-> cd Haruno-Botz
+> cp -r Txyz-Botz $HOME
+> cd Txyz-Botz
 > npm i
 > node run.js
 ```
@@ -71,4 +71,4 @@ Simple WhatsApp Bot
 
 # Hargai Kami Dengan Menambahkan Kredit ( Wm ) 
 
-~ Selamat Memakai
+~ Selamat Memakai~
