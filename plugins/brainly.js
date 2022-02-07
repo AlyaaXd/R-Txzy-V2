@@ -10,7 +10,7 @@ let handler = async (m, { text, command, usedPrefix }) => {
     m.reply(json.jawaban)
 }
 handler.help = ['brainly <teks>']
-handler.tags = ['edukasi']
+handler.tags = ['internet']
 handler.command = /^brainly$/i
 handler.register = true
 
