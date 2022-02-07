@@ -20,7 +20,7 @@ const defaultMenu = {
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let tags
   let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'anime', 'nsfw', 'internet', 'cristian', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'islamic', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
+  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'cristian', 'premium', 'anime', 'nsfw', 'internet', 'rpg', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'islamic', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
     'main': 'Utama',
@@ -38,8 +38,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'anonymous': 'Anonymous Chat',
     'nulis': 'MagerNulis & Logo',
     'downloader': 'Downloader',
-    'cristian': 'Cristian',
+    'rpg': 'Rpg',
     'tools': 'Tools',
+    'cristian': 'Cristian',
     'fun': 'Fun',
     'database': 'Database',
     'vote': 'Voting',
@@ -74,8 +75,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (teks == 'premium') tags = {
     'premium': 'Premium'
   }
-  if (teks == 'cristian') tags = {
-    'cristian': 'Cristian'
+  if (teks == 'rpg') tags = {
+    'rpg': 'Rpg'
   }
   if (teks == 'internet') tags = {
     'internet': 'Internet'
@@ -111,6 +112,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   }
   if (teks == 'islamic') tags = {
     'islamic': 'Islamic'
+  }
+  if (teks == 'cristian') tags = {
+    'cristian': 'Cristian'
   }
   if (teks == 'audio') tags = {
     'audio': 'Pengubah Suara'
@@ -282,9 +286,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
               "title": "─────「 11 」"
             }, {
               "rows": [{
-                "title": `Islamic`,
-                "description": "Menu islamic,
-                "rowId": `${_p}? islamic`
+                "title": `Rpg`,
+                "description": "Menu untuk Nulis & Logo",
+                "rowId": `${_p}? rpg`
               }],
               "title": "─────「 12 」"
             }, {
@@ -338,13 +342,20 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
               "title": "─────「 19 」"
             }, {
               "rows": [{
-                "title": `Cristian`,
-                "description": "Menu Cristian",
-                "rowId": `${_p}? cristian`
+                "title": `Islamic`,
+                "description": "Menu Islamic",
+                "rowId": `${_p}? islamic`
               }],
               "title": "─────「 20 」"
             }, {
               "rows": [{
+                "title": `Cristian`,
+                "description": "Menu cristian",
+                "rowId": `${_p}? cristian`
+              }],
+              "title": "─────「 21 」"
+            }, {
+            "rows": [{
                 "title": `Pengubah Suara`,
                 "description": "Menu Pengubah Suara",
                 "rowId": `${_p}? audio`
@@ -423,8 +434,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     // ├ ${_p + command} nsfw
     // ├ ${_p + command} vote
     // ├ ${_p + command} quran
-    // ├ ${_p + command} audio
     // ├ ${_p + command} cristian
+    // ├ ${_p + command} audio
+    // ├ ${_p + command} rpg
     // ├ ${_p + command} anime
     // ├ ${_p + command} tqto
     // ├ ${_p + command} jadibot
