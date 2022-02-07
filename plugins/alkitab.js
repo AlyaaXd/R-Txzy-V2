@@ -19,7 +19,7 @@ let handler = async (m, { text, usedPrefix, command }) => {
     m.reply(caption)
 }
 handler.help = ['alkitab'].map(v => v + ' <pencarian>')
-handler.tags = ['internet']
+handler.tags = ['cristian']
 handler.command = /^(alkitab)$/i
 
 module.exports = handler
