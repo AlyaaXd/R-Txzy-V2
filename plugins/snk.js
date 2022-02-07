@@ -19,7 +19,7 @@ Peraturan R-Txzy Bot
 4. Users dilarang menambahkan nomor bot secara illegal, untuk menambahkan silahkan hubungi owner.
 5. Users diharap untuk tidak menyalah gunakan fitur fitur bot.
 
-Syarat Ketentuan Haruno Bot
+Syarat Ketentuan R-Txyz Bot
 1. Bot akan keluar dari group apabila sudah waktunya keluar.
 2. R-Txzy dapan mem-ban users secara sepihak terlepas dari users salah atau tidak.
 3. R-Txzy *tidak akan bertanggungjawab atas apapun yang users lakukan terhadap fitur bot.*
