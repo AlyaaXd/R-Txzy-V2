@@ -1,3 +1,7 @@
+//MENCOBA BUG WA By BOTCAHX
+// Bukan slayer bang cuma nyoba aja:v
+
+
 let fetch = require('node-fetch')
 let handler = async (m, { conn }) => conn.sendButtonLoc(m.chat, await (await fetch(thanks)).buffer(), `
 Request Owner...
