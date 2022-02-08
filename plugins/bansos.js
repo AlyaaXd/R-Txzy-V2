@@ -36,9 +36,9 @@ let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
 }
 
 handler.help = ['bansos']
-handler.tags = ['game', 'premium']
+handler.tags = ['rpg']
 handler.command = /^(bansos)$/i
-handler.premium = true
+handler.premium = false
 handler.fail = null
 
 module.exports = handler
