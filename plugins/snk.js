@@ -29,7 +29,7 @@ Syarat Ketentuan R-Txyz Bot
 - AlyaXd
 - TioXd
 
-Peraturan: 1 Februaru 2022
+Peraturan: 1 Februari 2022
 `.trim()
     conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), teks, watermark, 'Menu', '.menu', 'Owner', '.owner', m)
 }
