@@ -70,6 +70,8 @@ Heroku Buildpack
 
  [`BOTCAHX`](https://wa.me/6282221792667)
 
+ [`YadiNguyen`](https:wa.me/62895385303317)
+
 # Hargai Kami Dengan Menambahkan Kredit ( Wm ) 
 
 ~ Selamat Memakai~
