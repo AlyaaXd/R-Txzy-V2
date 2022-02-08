@@ -1,14 +1,10 @@
-// Update button v2
-// BOTCAHX 
-//update dikit:v
-
+let fetch = require('node-fetch')
 let handler = async (m, { conn }) => {
     let { anon, anticall, antispam, antitroli, backup, jadibot, groupOnly, nsfw } = global.db.data.settings[conn.user.jid]
     const chats = conn.chats.all()
     const groups = chats.filter(v => v.jid.endsWith('g.us'))
     let totaljadibot = [...new Set([...global.conns.filter(conn => conn.user && conn.state !== 'close').map(conn => conn.user)])]
 
-    let wm = global.botwm
     let _uptime = process.uptime() * 1000
     let uptime = clockString(_uptime)
 
@@ -33,10 +29,8 @@ let handler = async (m, { conn }) => {
 ├ ${groupOnly ? '✅' : '❌'} *Mode Grup*
 ├ ${jadibot ? '✅' : '❌'} *Jadi Bot*
 ├ ${nsfw ? '✅' : '❌'} *Mode Nsfw*
-╰────────────···
-    `.trim()
-conn.send2Button(m.chat, str, wm, 'Info', '.speed', 'Owner', '.owner',m)
-conn.reply(str)
+╰────────────···`.trim()
+     await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©R-Txzy', 'Owner', '.owner', 'Menu', '.menu', m)
 }
 handler.help = ['botstatus']
 handler.tags = ['info']
