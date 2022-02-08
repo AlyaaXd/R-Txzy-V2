@@ -11,7 +11,7 @@ m.reply(wait)
   if (/webp/.test(mime)) {
     out = await webp2png(media)
   }
-  await conn.sendFile(m.chat, out, 'out.png', kasihcaption, m, false, { thumbnail: out })
+  await conn.sendFile(m.chat, out, 'out.png', m, false, { thumbnail: out })
 }
 handler.help = ['toimg']
 handler.tags = ['sticker']
