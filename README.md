@@ -60,7 +60,7 @@ Heroku Buildpack
 |--------|--------|
 | **FFMPEG** |[here](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) |
 | **IMAGEMAGICK** | [here](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
-| **Node.js**     | heroku/nodejs)|
+| **Node.js [salin]**     | heroku/nodejs|
 
 
 # THANKS TO 
