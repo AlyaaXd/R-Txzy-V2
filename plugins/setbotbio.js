@@ -1,4 +1,4 @@
-// NurNurz
+// Koncol :v
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   if (!text) throw `Harap masukan text!\n\nCotoh: ${usedPrefix + command} BOTCAHX Bot`
   try {
