@@ -1,3 +1,8 @@
+// Fix error gabisa ambil db:v
+//edit dikit kok ngab gak banyak 
+//by BOTCAHX
+
+
 let fs = require('fs')
 let handler  = async (m, { conn, text }) => {
 m.reply('Tunggu Sebentar, Proses Getting File database.json')
