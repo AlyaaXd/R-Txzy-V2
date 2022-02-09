@@ -82,3 +82,94 @@ Heroku Buildpack
 
 ![Ra Github languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AlyaXd&theme=tokyonight)
 
+
+## Arguments `node . [--options] [<session name>]`
+
+#### Contoh: `node . --self --restrict --autoread`
+
+### `--self`
+
+Aktifkan mode self (Mengabaikan yang lain)
+
+### `--prefix <prefixes>`
+
+* `prefixes` dipisahkan oleh masing-masing karakter
+Setel awalan
+
+### `--server`
+
+Digunakan untuk [heroku](https://heroku.com/) atau pindai melalui situs web
+
+### `--db <json-server-url>`
+
+Gunakan db eksternal alih-alih db lokal, 
+Contoh Server `https://json-server.nurutomo.repl.co/`
+Code: `https://repl.it/@Nurutomo/json-server`
+
+`node . --db 'https://json-server.nurutomo.repl.co/'`
+
+Server harus memiliki spesifikasi seperti ini
+
+#### GET
+
+```http
+GET /
+Accept: application/json
+```
+
+#### POST
+
+```http
+POST /
+Content-Type: application/json
+
+{
+ data: {}
+}
+```
+
+### `--big-qr`
+
+Jika qr unicode kecil tidak mendukung
+
+### `--restrict`
+
+Mengaktifkan plugin terbatas (yang dapat menyebabkan nomor Anda **diblokir** jika digunakan terlalu sering)
+
+* Administrasi Grup `add, kick, promote, demote`
+
+### `--img`
+
+Aktifkan pemeriksa gambar melalui terminal
+
+### `--autoread`
+
+Jika diaktifkan, semua pesan masuk akan ditandai sebagai telah dibaca
+
+### `--nyimak`
+
+Tidak ada bot, cukup cetak pesan yang diterima dan tambahkan pengguna ke database
+
+### `--test`
+
+**Development** Testing Mode
+
+### `--trace`
+
+```js
+conn.logger.level = 'trace'
+```
+
+### `--debug`
+
+```js
+conn.logger.level = 'debug'
+```
+
+---------
+
+ [![AlyaXd](https://github.com/AlyaXd.png?size=100)](https://github.com/AlyaXd) | [![BOTCAHX](https://github.com/BOTCAHX.png?size=100)](https://github.com/BOTCAHX)
+----|----
+[AlyaXd](https://github.com/AlyaXd) | [BOTCAHX](https://github.com/BOTCAHX)
+ Creator | Creator
+
