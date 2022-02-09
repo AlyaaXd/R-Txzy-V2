@@ -104,10 +104,10 @@ Digunakan untuk [heroku](https://heroku.com/) atau pindai melalui situs web
 ### `--db <json-server-url>`
 
 Gunakan db eksternal alih-alih db lokal, 
-Contoh Server `https://json-server.nurutomo.repl.co/`
-Code: `https://repl.it/@Nurutomo/json-server`
+Contoh Server `https://json-server.tioclkp.repl.co/`
+Code: `https://repl.it/@addserver/json-server`
 
-`node . --db 'https://json-server.nurutomo.repl.co/'`
+`node . --db 'https://json-server.tioclkp.repl.co/'`
 
 Server harus memiliki spesifikasi seperti ini
 
