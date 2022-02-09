@@ -2,7 +2,7 @@
 <img src="https://telegra.ph/file/4637101da58e21976363b.jpg" alt="AlyaaXzy X BOTCAHï¿½" width="300" />
 
 </p>
-<h1 align="center">AlyaaXzy X BOTCAH™</h1>
+<h1 align="center">AlyaaXzy X BOTCAHX</h1>
 
 <h1 align="center">Jangan lupa kasih stars & follow :)</h1>
 
@@ -76,11 +76,11 @@ Heroku Buildpack
 
 
 ### My Stat
-![Ra Github stat](https://github-readme-stats.vercel.app/api?username=AlyaXd&theme=midnight-purple&show_icons=true) 
+![Ra Github stat](https://github-readme-stats.vercel.app/api?username=AlyaXzy&theme=midnight-purple&show_icons=true) 
 
-![Ra Github troppy](https://github-profile-trophy.vercel.app/?username=AlyaXd&theme=monokai)
+![Ra Github troppy](https://github-profile-trophy.vercel.app/?username=AlyaXzy&theme=monokai)
 
-![Ra Github languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AlyaXd&theme=tokyonight)
+![Ra Github languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AlyaXzy&theme=tokyonight)
 
 
 ## Arguments `node . [--options] [<session name>]`
