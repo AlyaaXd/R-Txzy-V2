@@ -76,11 +76,11 @@ Heroku Buildpack
 
 
 ### My Stat
-![Ra Github stat](https://github-readme-stats.vercel.app/api?username=AlyaXzy&theme=midnight-purple&show_icons=true) 
+![Ra Github stat](https://github-readme-stats.vercel.app/api?username=AlyaaXd&theme=midnight-purple&show_icons=true) 
 
-![Ra Github troppy](https://github-profile-trophy.vercel.app/?username=AlyaXzy&theme=monokai)
+![Ra Github troppy](https://github-profile-trophy.vercel.app/?username=AlyaaXd&theme=monokai)
 
-![Ra Github languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AlyaXzy&theme=tokyonight)
+![Ra Github languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AlyaaXd&theme=tokyonight)
 
 
 ## Arguments `node . [--options] [<session name>]`
