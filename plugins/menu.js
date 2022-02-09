@@ -20,32 +20,35 @@ const defaultMenu = {
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let tags
   let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'cristian', 'premium', 'anime', 'nsfw', 'internet', 'rpg', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'islamic', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
+  let arrayMenu = ['all', 'game', 'edukasi', 'news', 'nsfw', 'xp', 'stiker', 'image', 'cristian', 'anime', 'kerangajaib', 'quotes', 'admin', 'rpg', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'vote', 'tanpakategori', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
     'main': 'Utama',
     'game': 'Game',
     'xp': 'Exp & Limit',
+    'nsfw': `NSFW ${global.opts['nsfw'] ? '' : '(Dinonaktifkan)'}`,
     'sticker': 'Stiker',
+    'edukasi': 'Edukasi',
+    'news': 'News',
     'kerang': 'Kerang Ajaib',
     'quotes': 'Quotes',
     'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`,
+    'rpg': 'Epic Rpg',
     'group': 'Grup',
+    'anime': 'Anime',
     'premium': 'Premium',
     'internet': 'Internet',
-    'anime': 'Anime',
-    'nsfw': 'Nsfw',
+    'image': 'Random Image',
     'anonymous': 'Anonymous Chat',
     'nulis': 'MagerNulis & Logo',
     'downloader': 'Downloader',
-    'rpg': 'Rpg',
     'tools': 'Tools',
-    'cristian': 'Cristian',
+    'cristian': 'cristian',
     'fun': 'Fun',
     'database': 'Database',
     'vote': 'Voting',
     'absen': 'Absen',
-    'quran': 'Al Qur\'an',
+    'quran': 'Islam',
     'audio': 'Pengubah Suara',
     'jadibot': 'Jadi Bot',
     'info': 'Info',
@@ -57,14 +60,30 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (teks == 'xp') tags = {
     'xp': 'Exp & Limit'
   }
+  if (teks == 'news') tags = {
+    'news': 'News'
+  }
+  if (teks == 'edukasi') tags = {
+    'edukasi': 'Edukasi'
+  }
+  if (teks == 'nsfw') tags = {
+    'hentai': 'Hentai',
+    'bokep': 'Bokep'
+  }
   if (teks == 'stiker') tags = {
     'sticker': 'Stiker'
+  }
+  if (teks == 'rpg') tags = {
+    'rpg': 'Epic Rpg'
   }
   if (teks == 'kerangajaib') tags = {
     'kerang': 'Kerang Ajaib'
   }
   if (teks == 'quotes') tags = {
     'quotes': 'Quotes'
+  }
+  if (teks == 'cristian') tags = {
+    'cristian': 'Cristian'
   }
   if (teks == 'admin') tags = {
     'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`
@@ -75,11 +94,11 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (teks == 'premium') tags = {
     'premium': 'Premium'
   }
-  if (teks == 'rpg') tags = {
-    'rpg': 'Rpg'
-  }
   if (teks == 'internet') tags = {
     'internet': 'Internet'
+  }
+  if (teks == 'image') tags = {
+    'image': 'Random Image'
   }
   if (teks == 'anonymous') tags = {
     'anonymous': 'Anonymous Chat'
@@ -103,18 +122,11 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'vote': 'Voting',
     'absen': 'Absen'
   }
-  if (teks == 'anime') tags = {
-    'anime': 'Anime',
+    if (teks == 'anime') tags = {
+    'anime': 'Anime'
   }
-  if (teks == 'nsfw') tags = {
-    'hentai': 'Hentai',
-    'bokep': 'Bokep'
-  }
-  if (teks == 'islamic') tags = {
-    'islamic': 'Islamic'
-  }
-  if (teks == 'cristian') tags = {
-    'cristian': 'Cristian'
+  if (teks == 'quran') tags = {
+    'quran': 'Islam'
   }
   if (teks == 'audio') tags = {
     'audio': 'Pengubah Suara'
@@ -188,229 +200,180 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       }
     })
     if (teks == '404') {
-      return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
-        "listMessage": {
-          "title": `${ucapan()}, ${name}`.trim(),
-          "description": "*© R-Txzy*",
-          "footerText": "Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.",
-          "buttonText": "Click Here",
-          "listType": "SINGLE_SELECT",
-          "sections": [
-            {
-              "rows": [{
-                "title": `Pemilik Bot`,
-                "description": "Nomor Pemilik Bot (owner)",
-                "rowId": `${_p}creator`
-              }, {
-                "title": "Syarat Ketentuan dan Peraturan",
-                "description": "Harap membaca Peraturan demi kenyamanan kita bersama",
-                "rowId": `${_p}rules`
-              }],
-              "title": "Informasi Bot"
-            }, {
-              "rows": [{
-                "title": `Semua Perintah`,
-                "description": "Menu Semua Perintah",
-                "rowId": `${_p}? all`
-                }],
-              "title": "─────「 1 」"
-            }, {
-              "rows": [{
-                "title": `Game`,
-                "description": "Menu untuk Game",
-                "rowId": `${_p}? game`
-              }],
-              "title": "─────「 2 」"
-            }, {
-              "rows": [{
-                "title": `XP`,
-                "description": "Menu untuk XP",
-                "rowId": `${_p}? xp`
-              }],
-              "title": "─────「 3 」"
-            }, {
-              "rows": [{
-                "title": `Sticker`,
-                "description": "Menu untuk Sticker",
-                "rowId": `${_p}? stiker`
-              }],
-              "title": "─────「 4 」"
-            }, {
-              "rows": [{
-                "title": `Kerang Ajaib`,
-                "description": "Puja kerang ajaib...",
-                "rowId": `${_p}? kerangajaib`
-              }],
-              "title": "─────「 5 」"
-            }, {
-              "rows": [{
-                "title": `Quotes`,
-                "description": "Menu untuk Quotes",
-                "rowId": `${_p}? quotes`
-              }],
-              "title": "─────「 6 」"
-            }, {
-              "rows": [{
-                "title": `Admin`,
-                "description": "Menu untuk Admin",
-                "rowId": `${_p}? admin`
-              }],
-              "title": "─────「 7 」"
-            }, {
-              "rows": [{
-                "title": `Grup`,
-                "description": "Menu untuk Group",
-                "rowId": `${_p}? group`
-              }],
-              "title": "─────「 8 」"
-            }, {
-              "rows": [{
-                "title": `Premium`,
-                "description": "Menu untuk Premium Users",
-                "rowId": `${_p}? premium`
-              }],
-              "title": "─────「 9 」"
-            }, {
-              "rows": [{
-                "title": `Internet`,
-                "description": "Menu untuk menjelajahi Internet...",
-                "rowId": `${_p}? internet`
-              }],
-              "title": "─────「 10 」"
-            }, {
-              "rows": [{
-                "title": `Anonymous Chat`,
-                "description": "Menu untuk Anonymous Chat",
-                "rowId": `${_p}? anonymous`
-              }],
-              "title": "─────「 11 」"
-            }, {
-              "rows": [{
-                "title": `Rpg`,
-                "description": "Menu untuk Nulis & Logo",
-                "rowId": `${_p}? rpg`
-              }],
-              "title": "─────「 12 」"
-            }, {
-              "rows": [{
-                "title": `Nulis & Logo`,
-                "description": "Menu untuk Nulis & Logo",
-                "rowId": `${_p}? nulis`
-              }],
-              "title": "─────「 13 」"
-            }, {
-              "rows": [{
-                "title": `Downloader`,
-                "description": "Menu Downloader",
-                "rowId": `${_p}? downloader`
-              }],
-              "title": "─────「 14 」"
-            }, {
-            	"rows": [{
-                "title": `NSFW`,
-                "description": "Menu Hentai",
-                "rowId": `${_p}? nsfw`
-              }],
-              "title": "─────「 15 」"
-            }, {
-              "rows":[{
-                "title": `Tools`,
-                "description": "Menu untuk Tools",
-                "rowId": `${_p}? tools`
-              }],
-              "title": "─────「 16 」"
-            }, {
-              "rows": [{
-                "title": `Fun`,
-                "description": "Menu Fun",
-                "rowId": `${_p}? fun`
-              }],
-              "title": "─────「 17 」"
-            }, {
-              "rows": [{
-                "title": `Database`,
-                "description": "Menu untuk Database",
-                "rowId": `${_p}? database`
-              }],
-              "title": "─────「 18 」"
-            }, {
-              "rows": [{
-                "title": `Vote & Absen`,
-                "description": "Menu untuk Vote & Absen",
-                "rowId": `${_p}? vote`
-              }],
-              "title": "─────「 19 」"
-            }, {
-              "rows": [{
-                "title": `Islamic`,
-                "description": "Menu Islamic",
-                "rowId": `${_p}? islamic`
-              }],
-              "title": "─────「 20 」"
-            }, {
-              "rows": [{
-                "title": `Cristian`,
-                "description": "Menu cristian",
-                "rowId": `${_p}? cristian`
-              }],
-              "title": "─────「 21 」"
-            }, {
-            "rows": [{
-                "title": `Pengubah Suara`,
-                "description": "Menu Pengubah Suara",
-                "rowId": `${_p}? audio`
-              }],
-              "title": "─────「 21 」"
-            }, {
-              "rows": [{
-                "title":  `Jadi Bot`,
-                "description": "Numpang",
-                "rowId": `${_p}? jadibot`
-              }],
-              "title": "─────「 22 」"
-            }, {
-            	"rows": [{
-                "title": `anime`,
-                "description": "Menu untuk mencari anime",
-                "rowId": `${_p}? anime`
-              }],
-              "title": "─────「 23 」"
-            }, {
-              "rows": [{
-                "title": `Info`,
-                "description": "Menu untuk Info",
-                "rowId": `${_p}? info`
-              }],
-              "title": "─────「 24 」"
-            }, {
-              "rows": [{
-                "title": `Tanpa Kategori`,
-                "description": "Menu Tanpa Kategori",
-                "rowId": `${_p}? tanpakategori`
-              }],
-              "title": "─────「 25 」"
-            }, {
-              "rows": [{
-                "title":  `Owner Menu`,
-                "description": "Menu Khusus Owner",
-                "rowId": `${_p}? owner`
-              }],
-              "title": "─────「 26 」"
-            }, {
-              "rows": [{
-                "title":  `THANKS TO`,
-                "description": "TERIMAKASIH KEPADA DEVELOPER SC",
-                "rowId": `.tqto`
-              }],
-              "title": "THANKS TO"
-            }
-          ], "contextInfo": {
-            "stanzaId": m.key.id,
-            "participant": m.sender,
-            "quotedMessage": m.message
-          }
-        }
-      }, {}), { waitForAck: true })
+			return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
+                    "listMessage":  {
+                        "title": `*${ucapan()}, ${name}*`.trim(),
+                        "description": `© *R-Txzy*`.trim(),
+                        "footerText": "Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.",
+                        "buttonText": "*Click Here*",
+                        "listType": "SINGLE_SELECT",
+                        "sections": [
+                            {
+                                "rows": [{
+                                    "title": "Status Bot",
+                                    "description": "Status dan informasi Bot.",
+                                    "rowId": ".botstatus"
+                                }, {
+                                    "title": "Rules",
+                                    "description": "User yang bijak selalu mematuhi Rules.",
+                                    "rowId": ".rules"
+                                }, {
+                                    "title": "Sewa bot - Premium",
+                                    "description": "Untuk kamu yang ingin melihat daftar harga sewa dan premium.",
+                                    "rowId": ".sewa"
+                                }],
+                                "title": "⟣─────────❲ Tentang Bot dan lainnya ❳──────────⟢"
+                            }, {
+                                "rows": [{
+                                    "title": `[🧾| Semua Perintah`,
+                                    "description": "Memberikan Semua Fitur Bot",
+                                    "rowId": ".? all"
+                                }, { 
+                                    "title": "|🕋| Islam",
+                                    "description": "Menu Tentang Islam",
+                                    "rowId": ".? quran"
+                                }, {
+                                	"title": "|⛪| Cristian",
+                                    "description": "Menu Tentang Kristen",
+                                    "rowId": ".? cristian"
+                                }, {
+                                    "title": "|🏫| Edukasi",
+                                    "description": "Menu Edukasi",
+                                    "rowId": ".? edukasi"
+                                }, { 
+                                    "title": "|📰| News",
+                                    "description": "Menu Berita",
+                                    "rowId": ".? News"
+                                }, { 
+                                    "title": "|🎮| Game",
+                                    "description": "Menu Game",
+                                    "rowId": ".? game"
+                                }, { 
+                                    "title": "|🗺️| Epic Rpg",
+                                    "description": "Menu Game RPG",
+                                    "rowId": ".? rpg"
+                                }, { 
+                                    "title": "|📈| XP",
+                                    "description": "XP Dan Level",
+                                    "rowId": ".? xp"
+                                }, { 
+                                    "title": "|🔞| NSFW",
+                                    "description": "Menu Bokep",
+                                    "rowId": ".? nsfw"
+                                }, { 
+                                    "title": "|🖼️| Random Image",
+                                    "description": "Menu Foto Random",
+                                    "rowId": ".? image"
+                                }, { 
+                                    "title": "|🎇| Stiker",
+                                    "description": "Menu Buat Stiker",
+                                    "rowId": ".? stiker"
+                                }, { 
+                                    "title": "|🐚| Kerang Ajaib",
+                                    "description": "Menurut Kerang ajaib....",
+                                    "rowId": ".? kerangajaib"
+                                }, { 
+                                    "title": "|📑| Quotes",
+                                    "description": "Menu Quotes",
+                                    "rowId": ".? quotes"
+                                }, { 
+                                    "title": "|🏛️| Admin",
+                                    "description": "Menu Admin Group",
+                                    "rowId": ".? admin"
+                                }, { 
+                                    "title": "|🏢| Grup",
+                                    "description": "Menu Group",
+                                    "rowId": ".? grup"
+                                }, { 
+                                    "title": "|🔝| Premium",
+                                    "description": "Menu Untuk Premium",
+                                    "rowId": ".? premium"
+                                }, { 
+                                    "title": "|🖥️| Internet",
+                                    "description": "Cari Sesuatu Di Bot",
+                                    "rowId": ".? internet"
+                                }, { 
+                                    "title": "|🥷| Anonymous",
+                                    "description": "Mainkan Anonymous Chat",
+                                    "rowId": ".? anonymous"
+                                }, { 
+                                    "title": "|✒️| Nulis & Logo",
+                                    "description": "Menu Nulis & Logo",
+                                    "rowId": ".? nulis"
+                                }, { 
+                                    "title": "|📺| Downloader",
+                                    "description": "Download Sesuatu Di Bot",
+                                    "rowId": ".? downloader"
+                                }, { 
+                                    "title": "|🔧| Tools",
+                                    "description": "Tools Yang Bisa di Gunakan Di Bot",
+                                    "rowId": ".? tools"
+                                }, { 
+                                    "title": "|🎇| Fun",
+                                    "description": "Menu Ceria",
+                                    "rowId": ".? fun"
+                                }, { 
+                                    "title": "|📂| Database",
+                                    "description": "Simpan Sesuatu Di Bot",
+                                    "rowId": ".? database"
+                                }, { 
+                                    "title": "|📝| Vote & Absen",
+                                    "description": "Menu Vote & Absen",
+                                    "rowId": ".? vote"
+                                }, { 
+                                    "title": "|🎙️| Pengubah Suara",
+                                    "description": "Ubah Suaramu",
+                                    "rowId": ".? audio"
+                                }, { 
+                                    "title": "|🤖| Jadi Bot",
+                                    "description": "Jadi Bot",
+                                    "rowId": ".? jadibot"
+                                }, { 
+                                    "title": "|⛩️| Anime",
+                                    "description": "Cari Anime Di Bot",
+                                    "rowId": ".? anime"
+                                }, { 
+                                    "title": "|ℹ️| Info",
+                                    "description": "Info Tentang Bot",
+                                    "rowId": ".? info"
+                                }, { 
+                                    "title": "Tanpa Kategori",
+                                    "description": "",
+                                    "rowId": ".? tanpakategori"
+                                }, { 
+                                    "title": "|🧑‍💻| Owner",
+                                    "description": "Menu Khusu Owner",
+                                    "rowId": ".? owner"
+                                }],
+                                "title": "⟣──────────────❲  All-Menu  ❳──────────────⟢"
+                            }, {
+                                "rows": [{
+                                    "title": "Owner bot",
+                                    "description": "pemilik R-Txzy",
+                                    "rowId": ".owner"
+                                }, {
+                                    "title": "Donasi",
+                                    "description": "Jangan lupa donasi untuk mendukung bot agar aktif selalu",
+                                    "rowId": ".donasi"
+                                }, {
+                                    "title": "Kata penutup",
+                                    "description": "Terimakasih untuk user yang telah menggunakan bot, jika ada kesalahan atau permintaan bisa chat ke nomor owner\nNote: chat P/main² tidak akan di respon(user bisa terkena banned/block)",
+                                    "rowId": ".creator"
+                                }, {
+                                    "title": "Thanks To |🎖️|",
+                                    "description": "Terima kasih banyak untuk user yang telah berpartisipasi dalam bot",
+                                    "rowId": ".tqto"
+                                }],
+                                "title": "⟣──────────────❲ Penutup ❳───────────────⟢"
+                            }
+                        ], "contextInfo": 
+						{ "stanzaId": m.key.id,
+                        "participant": "0@s.whatsapp.net",
+                        "remoteJid": "6283136505591-1614953337@g.us",
+                        "quotedMessage": m.message
+						}
+                    }
+                 }, {}), {waitForAck: true})
     }
     // gunakan ini jika kamu menggunakan whatsapp bisnis
     //   throw `
@@ -430,15 +393,11 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     // ├ ${_p + command} downloader
     // ├ ${_p + command} tools
     // ├ ${_p + command} fun
+    // ├ ${_p + command} cristian
     // ├ ${_p + command} database
-    // ├ ${_p + command} nsfw
     // ├ ${_p + command} vote
     // ├ ${_p + command} quran
-    // ├ ${_p + command} cristian
     // ├ ${_p + command} audio
-    // ├ ${_p + command} rpg
-    // ├ ${_p + command} anime
-    // ├ ${_p + command} tqto
     // ├ ${_p + command} jadibot
     // ├ ${_p + command} info
     // ├ ${_p + command} tanpa kategori
