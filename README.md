@@ -49,13 +49,14 @@ Simple WhatsApp Bot
 
 
 
-# Ambil [seesion.data.json] Di sini
+# Ambil [seesion.data.json] 
 
 [![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@tioclkp02/ScanQr-botwea-6#index.js?lite=1&outputonly=1#.replit)
 
 
 
-Heroku Buildpack
+# Heroku Buildpack
+
 | BuildPack | LINK |
 |--------|--------|
 | **FFMPEG** |[here](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) |
