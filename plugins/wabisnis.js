@@ -3,10 +3,7 @@ let handler = async(m, { conn, args, usedPrefix }) => {
 let chat = `┏━━⬣ 𝙄𝙉𝙁𝙊
 ┃
 ┃⬡ Mode : Public
-┃⬡ Jam : 16:24:32
-┃⬡ Tanggal : 10-09-2021
-┃⬡ Feature : 330 *Features*
-┃⬡ Battery : *33℅*
+┃⬡ Feature : true
 ┗⬣
 
 ┏━━⬣ 𝙈𝘼𝙄𝙉
@@ -552,3 +549,6 @@ handler.tags = ['main']
 handler.command = /^(wabisnis)$/i
  
 module.exports = handler
+
+
+//Tambah sendiri bang hapus yg gaperlu
