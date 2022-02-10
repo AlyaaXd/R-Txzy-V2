@@ -181,4 +181,8 @@ conn.logger.level = 'debug'
 ----|----
 [AlyaXd](https://github.com/AlyaaXd) | [BOTCAHX](https://github.com/BOTCAHX)
  Creator | Creator
+----|----
+[Nurutomo](https://github.com/Nurutomo) | [BOTCAHX](https://github.com/Nurutomo)
+ Creator | Creator
+
 
