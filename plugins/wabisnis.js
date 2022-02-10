@@ -355,8 +355,6 @@ let chat = `┏━━⬣ 𝙄𝙉𝙁𝙊
 ┃⬡ /aksara <opsi> <teks> (Limit)
 ┃⬡ /asmaulhusna
 ┃⬡ /base64
-┃⬡ /bass
-┃⬡ /blur
 ┃⬡ /calc <expression>
 ┃⬡ /beautiful (@tag)
 ┃⬡ /carbon <code>
@@ -376,27 +374,16 @@ let chat = `┏━━⬣ 𝙄𝙉𝙁𝙊
 ┃⬡ /gimage <query> (Limit)
 ┃⬡ /image <query> (Limit)
 ┃⬡ /githubsearch <pencarian>
-┃⬡ /glitch
-┃⬡ /hitler (@tag)
-┃⬡ /halah <teks>
-┃⬡ /hilih <teks>
-┃⬡ /huluh <teks>
-┃⬡ /heleh <teks>
-┃⬡ /holoh <teks>
 ┃⬡ /ifilter (Limit)
 ┃⬡ /tobraille
 ┃⬡ /inspect <chat.whatsapp.com>
 ┃⬡ /jail (@tag)
-┃⬡ /joke
-┃⬡ /map
-┃⬡ /skullmask
 ┃⬡ /mention <teks>
 ┃⬡ /nightcore
 ┃⬡ /nulis2 <teks>
 ┃⬡ /ocr (Limit)
 ┃⬡ /pinterest <query> (Limit)
 ┃⬡ /pinterest2 <query>.<total> (Limit)
-┃⬡ /pixel
 ┃⬡ /pptrigger (@tag)
 ┃⬡ /profile [@user]
 ┃⬡ /qr <teks>
@@ -411,9 +398,6 @@ let chat = `┏━━⬣ 𝙄𝙉𝙁𝙊
 ┃⬡ /scan [nomor]
 ┃⬡ /sepia
 ┃⬡ /slow
-┃⬡ /spamcall <nomor>
-┃⬡ /spamsms <nomor>
-┃⬡ /kecepatan
 ┃⬡ /ping
 ┃⬡ /speed
 ┃⬡ /spotifyplay <pencarian>
@@ -421,18 +405,11 @@ let chat = `┏━━⬣ 𝙄𝙉𝙁𝙊
 ┃⬡ /spotifysearch <pencarian>
 ┃⬡ /style <text>
 ┃⬡ /tourl (Limit)
-┃⬡ /imgbb (Limit)
 ┃⬡ /translate <lang> <teks>
-┃⬡ /trash
-┃⬡ /trash2 (@tag)
 ┃⬡ /tts <lang> <teks>
 ┃⬡ /upload (caption|reply media)
 ┃⬡ /upload2 (caption|reply media)
 ┃⬡ /wait (caption|reply image)
-┃⬡ /wanted (@tag)
-┃⬡ /wanted2 (caption|reply)
-┃⬡ /wasted
-┃⬡ /whatmusic
 ┃⬡ /yts <pencarian>
 ┃⬡ /ytsearch <pencarian>
 ┃⬡ /zodiac *2002 02 25*
@@ -447,14 +424,12 @@ let chat = `┏━━⬣ 𝙄𝙉𝙁𝙊
 ┃⬡ /clyde <teks>
 ┃⬡ /dadu
 ┃⬡ /darkjokes
-┃⬡ /jedagjedug
 ┃⬡ /jumpscare
 ┃⬡ /paling <teks>
 ┃⬡ /ref
 ┃⬡ /shitpost
 ┃⬡ /simi <teks>
 ┃⬡ /simsimi <teks>
-┃⬡ /simih <teks>
 ┃⬡ /tagme
 ┗⬣
 
@@ -572,6 +547,8 @@ let chat = `┏━━⬣ 𝙄𝙉𝙁𝙊
 ┗⬣`.trim()
 m.reply(chat)
 }
+handler.help = ['wabisnis']
+handler.tags = ['main']
 handler.command = /^(wabisnis)$/i
  
 module.exports = handler
