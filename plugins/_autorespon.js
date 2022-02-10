@@ -41,7 +41,7 @@ handler.all = async function (m, { isBlocked }) {
 ╠➥Ketuk Tombol Di Bawah Ya
 ║
 ╠═ ©2021 Rpg wabot-aq
-╠═ Scrip original by Nurutomo
+╠═ Script original by Nurutomo
 ╠═〘 R-TXZY〙 ═`.trim(), '© R-Txzy', 'Gopay', '#viadana', 'Pulsa', '#viapulsa', m)
 }
 
